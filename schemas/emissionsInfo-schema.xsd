@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="emissionsInfoes">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="emissionsInfo" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="efid" type="xs:string"></xs:element>
-							<xs:element name="id" type="xs:int"></xs:element>
-							<xs:element name="salesArea" type="xs:int"></xs:element>
-							<xs:element name="score" type="xs:int"></xs:element>
-							<xs:element name="scoreAlt" type="xs:int"></xs:element>
-							<xs:element name="smartwayScore" type="xs:int"></xs:element>
-							<xs:element name="standard" type="xs:string"></xs:element>
-							<xs:element name="stdText" type="xs:string"></xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-</xs:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="emissionsInfoes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="emissionsInfo" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="efid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="salesArea" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="score" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="scoreAlt" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="smartwayScore" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="standard" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="stdText" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
