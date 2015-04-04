@@ -146,11 +146,11 @@ vehicleId = 0
 
   var body = optionsResponse.body
 
-  var ind1 = body.indexOf("")
+  var ind1 = body.indexOf("<value>")
 
-  ind1 += "".length
+  ind1 += "<value>".length
 
-  var ind2 = body.indexOf("",ind1)
+  var ind2 = body.indexOf("</value>",ind1)
 
   vehicleId = body.substring(ind1,ind2)
 
