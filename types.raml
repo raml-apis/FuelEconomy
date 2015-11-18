@@ -1,0 +1,406 @@
+#%RAML 1.0 Library
+types:
+  EmissionsInfo:
+    type: object
+    properties:
+      efid?: string
+      id?: integer
+      salesArea?: integer
+      score?: number
+      scoreAlt?: number
+      smartwayScore?: integer
+      standard?: string
+      stdText?: string
+    example:
+      efid: AHNXV01.5FB3
+      id: 29636
+      salesArea: 3
+      score: 5.0
+      scoreAlt: -1.0
+      smartwayScore: 1
+      standard: B5
+      stdText: BIN 5
+  EmissionsInfoes:
+    type: object
+    properties:
+      emissionsInfoes: EmissionsInfo[]
+    example:
+      emissionsInfoes:
+        - efid: AHNXV01.5FB3
+          id: 29636
+          salesArea: 3
+          score: 5.0
+          scoreAlt: -1.0
+          smartwayScore: 1
+          standard: B5
+          stdText: BIN 5
+  Vehicle:
+    type: object
+    properties:
+      atvType?: string
+      barrels08?: number
+      barrelsA08?: number
+      c240Dscr?: string
+      c240bDscr?: string
+      charge120?: number
+      charge240?: number
+      charge240b?: number
+      city08?: integer
+      city08U?: number
+      cityA08?: integer
+      cityA08U?: number
+      cityCD?: number
+      cityE?: number
+      cityUF?: number
+      co2?: integer
+      co2A?: integer
+      co2TailpipeAGpm?: number
+      co2TailpipeGpm?: number
+      comb08?: integer
+      comb08U?: number
+      combA08?: integer
+      combA08U?: number
+      combE?: number
+      combinedCD?: number
+      combinedUF?: number
+      createdOn?: string
+      cylinders?: integer
+      displ?: number
+      drive?: string
+      emissionsList?: EmissionsInfo[]
+      engId?: integer
+      eng_dscr?: string
+      evMotor?: string
+      feScore?: integer
+      fuelCost08?: integer
+      fuelCostA08?: integer
+      fuelType?: string
+      fuelType1?: string
+      fuelType2?: string
+      ghgScore?: integer
+      ghgScoreA?: integer
+      guzzler?: string
+      highway08?: integer
+      highway08U?: number
+      highwayA08?: integer
+      highwayA08U?: number
+      highwayCD?: number
+      highwayE?: number
+      highwayUF?: number
+      hlv?: integer
+      hpv?: integer
+      id?: integer
+      lv2?: integer
+      lv4?: integer
+      make?: string
+      mfrCode?: string
+      model?: string
+      modifiedOn?: string
+      mpgData?: string
+      phevBlended?: boolean
+      phevCity?: integer
+      phevComb?: integer
+      phevHwy?: integer
+      pv2?: integer
+      pv4?: integer
+      range?: integer
+      rangeA?: string
+      rangeCity?: number
+      rangeCityA?: number
+      rangeHwy?: number
+      rangeHwyA?: number
+      startStop?: string
+      trans_dscr?: string
+      trany?: string
+      UCity?: number
+      UCityA?: number
+      UHighway?: number
+      UHighwayA?: number
+      VClass?: string
+      year?: integer
+      youSaveSpend?: integer
+      sCharger?: string
+      tCharger?: string
+    example:
+      barrels08: 10.613442000000001
+      barrelsA08: 0.0
+      charge120: 0.0
+      charge240: 0.0
+      charge240b: 0.0
+      city08: 28
+      city08U: 0.0
+      cityA08: 0
+      cityA08U: 0.0
+      cityCD: 0.0
+      cityE: 0.0
+      cityUF: 0.0
+      co2: -1
+      co2A: -1
+      co2TailpipeAGpm: 0.0
+      co2TailpipeGpm: 286.6774193548387
+      comb08: 31
+      comb08U: 0.0
+      combA08: 0
+      combA08U: 0.0
+      combE: 0.0
+      combinedCD: 0.0
+      combinedUF: 0.0
+      createdOn: 2013-01-01T00:00:00-05:00
+      cylinders: 4
+      displ: 1.5
+      drive: Front-Wheel Drive
+      emissionsList:
+        - efid: AHNXV01.5FB3
+          id: 29636
+          salesArea: 3
+          score: 5.0
+          scoreAlt: -1.0
+          smartwayScore: 1
+          standard: B5
+          stdText: BIN 5
+        - efid: AHNXV01.5FB3
+          id: 29636
+          salesArea: 7
+          score: 6.0
+          scoreAlt: -1.0
+          smartwayScore: 1
+          standard: U2
+          stdText: ULEV II
+      engId: 14
+      feScore: -1
+      fuelCost08: 1200
+      fuelCostA08: 0
+      fuelType: Regular
+      fuelType1: Regular Gasoline
+      ghgScore: -1
+      ghgScoreA: -1
+      highway08: 35
+      highway08U: 0.0
+      highwayA08: 0
+      highwayA08U: 0.0
+      highwayCD: 0.0
+      highwayE: 0.0
+      highwayUF: 0.0
+      hlv: 21
+      hpv: 91
+      id: 29636
+      lv2: 0
+      lv4: 0
+      make: Honda
+      model: Fit
+      modifiedOn: 2013-01-01T00:00:00-05:00
+      mpgData: Y
+      phevBlended: false
+      phevCity: 0
+      phevComb: 0
+      phevHwy: 0
+      pv2: 0
+      pv4: 0
+      range: 0
+      rangeCity: 0.0
+      rangeCityA: 0.0
+      rangeHwy: 0.0
+      rangeHwyA: 0.0
+      trany: Automatic 5-spd
+      UCity: 36.5
+      UCityA: 0.0
+      UHighway: 49.3
+      UHighwayA: 0.0
+      VClass: Small Station Wagons
+      year: 2010
+      youSaveSpend: 1750
+  MenuItem:
+    type: object
+    properties:
+      text: any
+      value: any
+    example:
+      text: Aston Martin
+      value: Aston Martin
+  Menu:
+    type: object
+    properties:
+      menuItems: MenuItem[]
+    example:
+      menuItems:
+        - text: Aston Martin
+          value: Aston Martin
+  FuelPrice:
+    type: object
+    properties:
+      cng: number
+      diesel: number
+      e85: number
+      electric: number
+      lpg: number
+      midgrade: number
+      premium: number
+      regular: number
+    example:
+      cng: 2.09
+      diesel: 3.87
+      e85: 3.04
+      electric: 0.12
+      lpg: 2.96
+      midgrade: 3.48
+      premium: 3.66
+      regular: 3.3
+  FuelPrices:
+    type: object
+    properties:
+      fuelPrices: FuelPrice[]
+    example:
+      fuelPrices:
+        - cng: 2.09
+          diesel: 3.87
+          e85: 3.04
+          electric: 0.12
+          lpg: 2.96
+          midgrade: 3.48
+          premium: 3.66
+          regular: 3.3
+  YourMpgVehicle:
+    type: object
+    properties:
+      yourMpgVehicle:
+        type: object
+        properties:
+          avgMpg: number
+          cityPercent: integer
+          highwayPercent: integer
+          maxMpg: integer
+          minMpg: integer
+          recordCount: integer
+          vehicleId: integer
+    example:
+      yourMpgVehicle:
+        avgMpg: 49.360789458
+        cityPercent: 45
+        highwayPercent: 55
+        maxMpg: 74
+        minMpg: 35
+        recordCount: 187
+        vehicleId: 26425
+  YourMpgDriverVehicle:
+    type: object
+    properties:
+      cityPercent: integer
+      highwayPercent: integer
+      lastDate: string
+      mpg: number
+      state: string
+      vehicleId: integer
+    example:
+      cityPercent: 50
+      highwayPercent: 50
+      lastDate: 2011-04-10T00:00:00-04:00
+      mpg: 73.8
+      state: MI
+      vehicleId: 26425
+  YourMpgDriverVehicles:
+    type: object
+    properties:
+      yourMpgDriverVehicles: YourMpgDriverVehicle[]
+    example:
+      yourMpgDriverVehicles:
+        - cityPercent: 50
+          highwayPercent: 50
+          lastDate: 2011-04-10T00:00:00-04:00
+          mpg: 73.8
+          state: MI
+          vehicleId: 26425
+  Vehicles:
+    type: object
+    properties:
+      vehicles: Vehicle[]
+    example:
+      vehicles:
+        - barrels08: 10.613442000000001
+          barrelsA08: 0.0
+          charge120: 0.0
+          charge240: 0.0
+          charge240b: 0.0
+          city08: 28
+          city08U: 0.0
+          cityA08: 0
+          cityA08U: 0.0
+          cityCD: 0.0
+          cityE: 0.0
+          cityUF: 0.0
+          co2: -1
+          co2A: -1
+          co2TailpipeAGpm: 0.0
+          co2TailpipeGpm: 286.6774193548387
+          comb08: 31
+          comb08U: 0.0
+          combA08: 0
+          combA08U: 0.0
+          combE: 0.0
+          combinedCD: 0.0
+          combinedUF: 0.0
+          createdOn: 2013-01-01T00:00:00-05:00
+          cylinders: 4
+          displ: 1.5
+          drive: Front-Wheel Drive
+          emissionsList:
+            - efid: AHNXV01.5FB3
+              id: 29636
+              salesArea: 3
+              score: 5.0
+              scoreAlt: -1.0
+              smartwayScore: 1
+              standard: B5
+              stdText: BIN 5
+            - efid: AHNXV01.5FB3
+              id: 29636
+              salesArea: 7
+              score: 6.0
+              scoreAlt: -1.0
+              smartwayScore: 1
+              standard: U2
+              stdText: ULEV II
+          engId: 14
+          feScore: -1
+          fuelCost08: 1200
+          fuelCostA08: 0
+          fuelType: Regular
+          fuelType1: Regular Gasoline
+          ghgScore: -1
+          ghgScoreA: -1
+          highway08: 35
+          highway08U: 0.0
+          highwayA08: 0
+          highwayA08U: 0.0
+          highwayCD: 0.0
+          highwayE: 0.0
+          highwayUF: 0.0
+          hlv: 21
+          hpv: 91
+          id: 29636
+          lv2: 0
+          lv4: 0
+          make: Honda
+          model: Fit
+          modifiedOn: 2013-01-01T00:00:00-05:00
+          mpgData: Y
+          phevBlended: false
+          phevCity: 0
+          phevComb: 0
+          phevHwy: 0
+          pv2: 0
+          pv4: 0
+          range: 0
+          rangeCity: 0.0
+          rangeCityA: 0.0
+          rangeHwy: 0.0
+          rangeHwyA: 0.0
+          trany: Automatic 5-spd
+          UCity: 36.5
+          UCityA: 0.0
+          UHighway: 49.3
+          UHighwayA: 0.0
+          VClass: Small Station Wagons
+          year: 2010
+          youSaveSpend: 1750
+  RecommendationSet:
+    type: object
