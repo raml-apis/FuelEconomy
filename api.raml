@@ -35,7 +35,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-year-example.xml
     /make:
       get:
         is: [ hasYear ]
@@ -45,7 +44,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-make-example.xml
     /model:
       get:
         is: [ hasMake , hasYear ]
@@ -55,7 +53,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-model-example.xml
     /options:
       get:
         is: [ hasModel , hasMake , hasYear ]
@@ -65,7 +62,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-options-example.xml
   /export/all:
     get:
       responses:
@@ -91,7 +87,6 @@ traits:
           body:
             application/xml:
               type: types.YourMpgVehicle
-              example: !include examples/yourMpgVehicle-example.xml
   /ympgDriverVehicle/{id}:
     get:
       description: Return a list of user MPG records for a specific vehicle ID
@@ -109,7 +104,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-shared-make-example.xml
     /model:
       get:
         is: [ hasMake ]
@@ -119,7 +113,6 @@ traits:
             body:
               application/xml:
                 type: types.Menu
-                example: !include examples/menu-shared-models-example.xml
   /vehicles:
     get:
       is: [ hasModel , hasMake ]
