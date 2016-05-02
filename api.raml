@@ -3,12 +3,12 @@ title: Fuel Economy
 baseUri: http://www.fueleconomy.gov/ws/rest
 mediaType: application/xml
 uses:
-  - types: !include types.raml
+  types: types.raml
 traits:
-  - hasVclass: !include traits/hasVclass.raml
-  - hasYear: !include traits/hasYear.raml
-  - hasMake: !include traits/hasMake.raml
-  - hasModel: !include traits/hasModel.raml
+  hasVclass: !include traits/hasVclass.raml
+  hasYear: !include traits/hasYear.raml
+  hasMake: !include traits/hasMake.raml
+  hasModel: !include traits/hasModel.raml
 /vehicle:
   /{id}:
     get:
@@ -77,7 +77,6 @@ traits:
         body:
           application/xml:
             type: types.FuelPrices
-            example: !include examples/fuelPrices-example.xml
 /ympg/shared:
   /ympgVehicle/{id}:
     get:
